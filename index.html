@@ -7,43 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <!-- Bootstrap CSS -->
+    <!-- build:css -->
     <link rel="stylesheet" href="css/bootstrap.cerulean.css">
-    <!-- build:css css/aditional.min.css -->
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/dialogs.css">
-    <!-- /build -->
+    <!-- endbuild -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
     <!-- Angular y modulos -->
-    <!-- build:js bower_components/angular/angular.min.js -->
+    <!-- build:bower -->
     <script src="bower_components/angular/angular.js"></script>
-    <!-- /build -->
-    <!-- build:js bower_components/angular-ui-router/release/angular-ui-router.min.js -->
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <!-- /build -->
-    <!-- build:js bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js -->
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <!-- /build -->
-    <!-- build:js bower_components/angular-socket-io/socket.min.js -->
     <script src="bower_components/angular-socket-io/socket.js"></script>
-    <!-- /build -->
-    <!-- build:js bower_components/angular-animate/angular-animate.min.js -->
     <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <!-- /build -->
+    <!-- endbuild -->
+    <!-- build:socket -->
     <script src="js/socket.io.min.js"></script>
+    <!-- endbuild -->
     <!-- App Script -->
-    <!-- build:js js/app.min.js -->
+    <!-- build:app -->
     <script src="app.js"></script>
     <script src="config.development.js"></script>
     <script src="class/appointment.class.js"></script>
-    <script src="service/dialogs/dialogs.js"></script>
-    <script src="service/cache.service.js"></script>
+    <script src="services/dialogs/dialogs.js"></script>
+    <script src="services/cache.service.js"></script>
     <script src="consulta/consulta.factory.js"></script>
     <script src="consulta/consulta.controller.js"></script>
-    <!-- /build -->
-    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]-->
-    <script src="js/html5.js"></script>
-    <!--[endif]-->
+    <!-- endbuild -->
 </head>
 
 <body class="container-fluid col-lg-12">
