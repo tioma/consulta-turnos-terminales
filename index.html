@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="consultaTurnosApp">
+
+<head>
+    <title>Administraci&oacute;n General de Puertos S.E.</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.cerulean.css">
+    <!-- build:css css/aditional.min.css -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/dialogs.css">
+    <!-- /build -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
+    <!-- Angular y modulos -->
+    <!-- build:js bower_components/angular/angular.min.js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- /build -->
+    <!-- build:js bower_components/angular-ui-router/release/angular-ui-router.min.js -->
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- /build -->
+    <!-- build:js bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js -->
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- /build -->
+    <!-- build:js bower_components/angular-socket-io/socket.min.js -->
+    <script src="bower_components/angular-socket-io/socket.js"></script>
+    <!-- /build -->
+    <!-- build:js bower_components/angular-animate/angular-animate.min.js -->
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <!-- /build -->
+    <script src="js/socket.io.min.js"></script>
+    <!-- App Script -->
+    <!-- build:js js/app.min.js -->
+    <script src="app.js"></script>
+    <script src="config.development.js"></script>
+    <script src="class/appointment.class.js"></script>
+    <script src="service/dialogs/dialogs.js"></script>
+    <script src="service/cache.service.js"></script>
+    <script src="consulta/consulta.factory.js"></script>
+    <script src="consulta/consulta.controller.js"></script>
+    <!-- /build -->
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]-->
+    <script src="js/html5.js"></script>
+    <!--[endif]-->
+</head>
+
+<body class="container-fluid col-lg-12">
+
+<nav class="navbar navbar-default navbar-fixed-top hidden-print">
+    <div class="container-fluid">
+        <div class="navbar-header" uib-dropdown>
+            <a class="nav navbar-brand" style="padding: 0 !important"><img src="images/logoBlanco.png" style="max-height: 100%"/></a>
+            <!--<button class="navbar-toggle collapsed" type="button"  data-target=".navbar-responsive-collapse" ng-click="isCollapsed = !isCollapsed" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>-->
+        </div>
+
+        <div class="navbar-collapse collapse" aria-expanded="false" uib-collapse="isCollapsed">
+
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid row wrapper">
+    <ui-view></div>
+</div>
+
+<footer class="footer">
+    <hr>
+    <span class="hidden-xs">Administración General de Puertos S.E. - Departamento de desarrollo</span>
+    <span class="visible-xs">AGP S.E. - Depto. de desarrollo</span>
+</footer>
+
+</body>
+
+</html>
