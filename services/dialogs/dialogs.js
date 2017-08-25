@@ -7,7 +7,7 @@ consultaTurnosApp.service('dialogs', ['$uibModal', function($uibModal){
         confirm: function(title, message){
             return $uibModal.open({
                 controller: 'dialogsCtrl',
-                templateUrl: './service/dialogs/confirm.html',
+                templateUrl: './services/dialogs/confirm.html',
                 resolve: {
                     title: function(){
                         return title;
@@ -21,7 +21,7 @@ consultaTurnosApp.service('dialogs', ['$uibModal', function($uibModal){
         error: function(title, message){
             return $uibModal.open({
                 controller: 'dialogsCtrl',
-                templateUrl: './service/dialogs/error.html',
+                templateUrl: './services/dialogs/error.html',
                 resolve: {
                     title: function(){
                         return title;
@@ -35,7 +35,7 @@ consultaTurnosApp.service('dialogs', ['$uibModal', function($uibModal){
         notify: function(title, message){
             return $uibModal.open({
                 controller: 'dialogsCtrl',
-                templateUrl: './service/dialogs/notify.html',
+                templateUrl: './services/dialogs/notify.html',
                 resolve: {
                     title: function(){
                         return title
@@ -49,7 +49,7 @@ consultaTurnosApp.service('dialogs', ['$uibModal', function($uibModal){
         login: function(){
             return $uibModal.open({
                 controller: 'loginDialogCtrl',
-                templateUrl: './service/dialogs/login.html',
+                templateUrl: './services/dialogs/login.html',
                 backdrop: 'static'
             })
         }
