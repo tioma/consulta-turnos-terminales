@@ -1,7 +1,7 @@
 /**
  * Created by kolesnikov-a on 31/07/2017.
  */
-const consultaTurnosApp = angular.module('consultaTurnosApp', ['ui.router', 'ui.bootstrap', 'btford.socket-io']);
+const consultaTurnosApp = angular.module('consultaTurnosApp', ['ui.router', 'ui.bootstrap', 'btford.socket-io', 'ui-dialogs']);
 
 
 consultaTurnosApp.config(['$stateProvider', '$urlRouterProvider', '$provide', 'cacheServiceProvider', function ($stateProvider, $urlRouterProvider, $provide, cacheServiceProvider) {
