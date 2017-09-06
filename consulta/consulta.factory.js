@@ -64,7 +64,7 @@ consultaTurnosApp.factory('turnosFactory', ['$http', '$q', 'APP_CONFIG', 'Appoin
 						deferred.resolve(turnos);
 					} else {
 						const error = {
-							message: `No se ha encontrado ningún turno para el camión de patente ${container}`
+							message: `No se ha encontrado ningún turno para el camión de patente ${patente}`
 						};
 						deferred.reject(error);
 					}
