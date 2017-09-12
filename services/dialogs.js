@@ -1,6 +1,7 @@
 /**
  * Created by kolesnikov-a on 26/04/2016.
  */
+import 'angular-ui-bootstrap';
 
 const dialogsModule = angular.module('ui-dialogs', ['ui.bootstrap']);
 
@@ -107,3 +108,5 @@ class DialogsCtrl {
 DialogsCtrl.$inject = ['$uibModalInstance', 'title', 'message'];
 
 dialogsModule.controller('dialogsCtrl', DialogsCtrl);
+
+export default dialogsModule.name;

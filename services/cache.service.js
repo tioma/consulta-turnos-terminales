@@ -4,46 +4,44 @@
 /**
  * Created by leo on 12/03/15.
  */
-consultaTurnosApp.service('cacheService', ['$http', 'APP_CONFIG', '$q',
-    function ($http, APP_CONFIG, $q) {
 
-        //Se encarga de asegurarse de que antes de cargar cada vista, esta tenga los datos necesarios para funcionar, si no están hace las llamadas y los guarda en caché
-        //No devuelve datos.
-        //Siempre devuelve el resolve para no entorpecer la operatoria, ya que por lo general son datos accesorios, y errores en las cargas en definitiva significarían
-        //algún problema con el servidor
+export default class CacheService {
 
-        class cacheService {
+	constructor($http, APP_CONFIG, $q){
+		this._$http = $http;
+		this._APPCONFIG = APP_CONFIG;
+		this._$q = $q;
+	}
 
-            cargaContainersList(){
-                const deferred = $q.defer();
-				const inserturl = `${APP_CONFIG.SERVER_URL}/containerTurnoList`;
-				$http.get(inserturl).then((response) => {
-					if (response.data.status == 'OK'){
-						deferred.resolve(response.data.data);
-                    } else {
-					    deferred.resolve([]);
-                    }
-				}).catch((error) => {
-					deferred.resolve([]);
-				});
-				return deferred.promise;
-            }
+	cargaContainersList(){
+		const deferred = this._$q.defer();
+		const inserturl = `${this._APPCONFIG.SERVER_URL}/containerTurnoList`;
+		this._$http.get(inserturl).then((response) => {
+			if (response.data.status == 'OK'){
+				deferred.resolve(response.data.data);
+			} else {
+				deferred.resolve([]);
+			}
+		}).catch((error) => {
+			deferred.resolve([]);
+		});
+		return deferred.promise;
+	}
 
-            cargaPatentesList(){
-				const deferred = $q.defer();
-				const inserturl = `${APP_CONFIG.SERVER_URL}/camionTurnoList`;
-				$http.get(inserturl).then((response) => {
-					if (response.data.status == 'OK'){
-						deferred.resolve(response.data.data);
-					} else {
-						deferred.resolve([]);
-					}
-				}).catch((error) => {
-					deferred.resolve([]);
-				});
-				return deferred.promise;
-            }
-        }
+	cargaPatentesList(){
+		const deferred = this._$q.defer();
+		const inserturl = `${this._APPCONFIG.SERVER_URL}/camionTurnoList`;
+		this._$http.get(inserturl).then((response) => {
+			if (response.data.status == 'OK'){
+				deferred.resolve(response.data.data);
+			} else {
+				deferred.resolve([]);
+			}
+		}).catch((error) => {
+			deferred.resolve([]);
+		});
+		return deferred.promise;
+	}
+}
 
-        return new cacheService();
-    }]);
+CacheService.$inject = ['$http', 'APP_CONFIG', '$q'];
