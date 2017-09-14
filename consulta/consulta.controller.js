@@ -8,7 +8,7 @@ export default class TurnosConsultaCtrl {
 		this._turnosFactory = turnosFactory;
 		this._$uibModal = $uibModal;
 
-		this.containerList = containerList;
+		this.containersList = containerList;
 		this.patentesList = patentesList;
 
 		this.searchBy = 'C';

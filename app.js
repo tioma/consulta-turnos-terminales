@@ -17,7 +17,7 @@ import appFilters from './filters/app.filters.js';
 import appDirectives from './directives/app.directives';
 import dialogs from './services/dialogs';
 
-import routing from './app.config';
+import routing from './app.routing';
 
 const consultaTurnosApp = angular.module('consultaTurnosApp', [uirouter, 'ui.bootstrap', 'btford.socket-io', dialogs, turnosModule, appFilters, appDirectives])
 	.config(routing);

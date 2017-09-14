@@ -1,24 +1,12 @@
 const path = require('path');
-const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: './app.js',
-	devtool: 'source-map',
-	//devtool: 'inline-source-map',
 	plugins: [
 		new CleanWebpackPlugin(['build']),
-		new UglifyJSPlugin({
-			sourceMap: true
-		}),
-		new webpack.DefinePlugin({
-			'process.env': {
-				'NODE_ENV': JSON.stringify('production')
-			}
-		}),
 		new CopyWebpackPlugin([{
 			from: __dirname + '/public'
 		}]),

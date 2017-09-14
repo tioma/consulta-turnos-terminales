@@ -7,7 +7,7 @@ import uirouter from 'angular-ui-router';
 
 import 'angular-ui-bootstrap';
 
-import APP_CONFIG from '../config.development';
+import APP_CONFIG from '../apiEndpoint.config';
 import routing from './consulta.routing';
 
 import TurnosConsultaCtrl from './consulta.controller';

@@ -34,18 +34,6 @@ html, body {
     font-weight: bolder;
 }
 
-.back-container{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    overflow:hidden;
-
-    background: url('../images/containersPuerto.png') no-repeat fixed center;
-    background-size: cover;
-}
-
 .columnaAnidada {
     border-bottom:none !important;
     text-align: center !important;
